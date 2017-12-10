@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @piscina.nombre %>
+</p>
+
+<p>
+  <strong>Hectareas:</strong>
+  <%= @piscina.hectareas %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @piscina.estado %>
+</p>
+
+<%= link_to 'Edit', edit_piscina_path(@piscina) %> |
+<%= link_to 'Back', piscinas_path %>

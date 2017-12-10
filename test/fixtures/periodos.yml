@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fechaInicio: 2017-12-05
+  fechaFin: 2017-12-05
+  totalCosto: 1
+  id_corrida: 
+
+two:
+  fechaInicio: 2017-12-05
+  fechaFin: 2017-12-05
+  totalCosto: 1
+  id_corrida: 

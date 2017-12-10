@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @balanceado.marca %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @balanceado.tipo %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @balanceado.precio %>
+</p>
+
+<p>
+  <strong>Presentacion:</strong>
+  <%= @balanceado.presentacion %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @balanceado.stock %>
+</p>
+
+<%= link_to 'Edit', edit_balanceado_path(@balanceado) %> |
+<%= link_to 'Back', balanceados_path %>

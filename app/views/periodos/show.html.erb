@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fechainicio:</strong>
+  <%= @periodo.fechaInicio %>
+</p>
+
+<p>
+  <strong>Fechafin:</strong>
+  <%= @periodo.fechaFin %>
+</p>
+
+<p>
+  <strong>Totalcosto:</strong>
+  <%= @periodo.totalCosto %>
+</p>
+
+<p>
+  <strong>Id corrida:</strong>
+  <%= @periodo.id_corrida %>
+</p>
+
+<%= link_to 'Edit', edit_periodo_path(@periodo) %> |
+<%= link_to 'Back', periodos_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: piscina, local: true) do |form| %>
+  <% if piscina.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(piscina.errors.count, "error") %> prohibited this piscina from being saved:</h2>
+
+      <ul>
+      <% piscina.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :piscina_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hectareas %>
+    <%= form.number_field :hectareas, id: :piscina_hectareas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.check_box :estado, id: :piscina_estado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

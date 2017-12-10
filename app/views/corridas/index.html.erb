@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Corridas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fechainicio</th>
+      <th>Fechafin</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @corridas.each do |corrida| %>
+      <tr>
+        <td><%= corrida.fechaInicio %></td>
+        <td><%= corrida.fechaFin %></td>
+        <td><%= corrida.estado %></td>
+        <td><%= link_to 'Show', corrida %></td>
+        <td><%= link_to 'Edit', edit_corrida_path(corrida) %></td>
+        <td><%= link_to 'Destroy', corrida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Corrida', new_corrida_path %>

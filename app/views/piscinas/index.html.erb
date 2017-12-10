@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Piscinas</h1>
+
+<table>
+
+  <tbody>
+
+  <div class="container">
+
+    <% @piscinas.in_groups_of(3, false) do |group| %>
+
+        <div class="row">
+
+          <% group.each do |piscina| %>
+
+              <div class="col-sm">
+
+                <div class="card" style="width: 20rem;">
+
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <%= piscina.nombre %>
+                    </h4>
+                    <p class="card-text">
+                      <%= piscina.hectareas %> Ha.
+                    </p>
+                    <a>
+                      <%= link_to piscina, class: 'btn btn-success' do %>
+                          <%= octicon "eye" %>
+                      <% end %>
+                    </a>
+                    <a>
+                      <%= link_to edit_piscina_path(piscina), class: 'btn btn-warning' do %>
+                          <%= octicon "pencil" %>
+                      <% end %>
+                    </a>
+                    <a>
+                      <%= link_to piscina, method: :delete, data: {confirm: 'Estás Seguro?'}, class: 'btn btn-danger' do %>
+                          <%= octicon "trashcan" %>
+                      <% end %>
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+
+          <% end %>
+
+        </div>
+
+
+    <% end %>
+
+  </div>
+
+
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Añadir Piscina', new_piscina_path %>

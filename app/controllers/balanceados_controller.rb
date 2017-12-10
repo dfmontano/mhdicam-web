@@ -29,6 +29,8 @@ class BalanceadosController < ApplicationController
 
     @balanceado.update_attribute(:stock, cantidad)
     
+    flash[:notice] = 'Stock actualizado'
+
   end
 
   def sub_stock

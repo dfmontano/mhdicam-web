@@ -1,0 +1,32 @@
+<%= form_with(model: corrida, local: true) do |form| %>
+  <% if corrida.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(corrida.errors.count, "error") %> prohibited this corrida from being saved:</h2>
+
+      <ul>
+      <% corrida.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fechaInicio %>
+    <%= form.date_select :fechaInicio, id: :corrida_fechaInicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaFin %>
+    <%= form.date_select :fechaFin, id: :corrida_fechaFin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.check_box :estado, id: :corrida_estado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

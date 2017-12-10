@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Balanceados</h1>
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Tipo</th>
+      <th>Precio</th>
+      <th>Presentacion</th>
+      <th>Precio/libra</th>
+      <th>Stock</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @balanceados.each do |balanceado| %>
+      <tr>
+        <td><%= balanceado.marca %></td>
+        <td><%= balanceado.tipo %></td>
+        <td><%= balanceado.precio %></td>
+        <td><%= balanceado.presentacion %></td>
+        <td><%= balanceado.precioLibra %></td>
+        <td><%= balanceado.stock %></td>
+        <td><%= link_to 'Mostrar', balanceado %></td>
+        <td><%= link_to 'Editar', edit_balanceado_path(balanceado) %></td>
+        <td><%= link_to 'Eliminar', balanceado, method: :delete, data: { confirm: 'Estás seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Balanceado', new_balanceado_path %>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MhidcamRails</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <nav id="sidebar">
+
+        <div class="sidebar-header">
+
+          <h3>MHIDCAM S.A</h3>
+          <strong>MH</strong>
+
+        </div>
+
+        <ul class="list-unstyled components">
+
+          <li class="active"> <a href="#"> Inicio </a> </li>
+
+          <li><a href="#">About</a></li>
+
+          <li><!-- Link with dropdown items -->
+            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li><a href="#">P</a></li>
+              <li><a href="#">P</a></li>
+              <li><a href="#">Pe</a></li>
+            </ul>
+
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+      <div id="content">
+
+
+        <%= yield %>
+
+      </div>
+
+    </div>
+
+    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+      <i class="glyphicon glyphicon-align-left"></i>
+      Toggle Sidebar
+    </button>
+
+  </body>
+
+  <script>
+
+      $(document).ready(function () {
+
+          $('#sidebarCollapse').on('click', function () {
+              $('#sidebar').toggleClass('active');
+          });
+
+      });
+
+  </script>
+
+</html>

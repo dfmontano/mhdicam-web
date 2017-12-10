@@ -1,0 +1,37 @@
+<%= form_with(model: periodo, local: true) do |form| %>
+  <% if periodo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(periodo.errors.count, "error") %> prohibited this periodo from being saved:</h2>
+
+      <ul>
+      <% periodo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fechaInicio %>
+    <%= form.date_select :fechaInicio, id: :periodo_fechaInicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaFin %>
+    <%= form.date_select :fechaFin, id: :periodo_fechaFin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :totalCosto %>
+    <%= form.number_field :totalCosto, id: :periodo_totalCosto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_corrida %>
+    <%= form.text_field :id_corrida, id: :periodo_id_corrida %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

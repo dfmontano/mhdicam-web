@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fechainicio:</strong>
+  <%= @corrida.fechaInicio %>
+</p>
+
+<p>
+  <strong>Fechafin:</strong>
+  <%= @corrida.fechaFin %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @corrida.estado %>
+</p>
+
+<%= link_to 'Edit', edit_corrida_path(@corrida) %> |
+<%= link_to 'Back', corridas_path %>
