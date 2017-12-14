@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :vitaminas
+  resources :desinfectantes
+  resources :bacteria
+  resources :fertilizantes
   resources :periodos
   resources :corridas
   resources :piscinas

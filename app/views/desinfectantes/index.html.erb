@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Desinfectantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Tipo</th>
+      <th>Precio</th>
+      <th>Presentacion</th>
+      <th>Stock</th>
+      <th>Liquido</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @desinfectantes.each do |desinfectante| %>
+      <tr>
+        <td><%= desinfectante.marca %></td>
+        <td><%= desinfectante.tipo %></td>
+        <td><%= desinfectante.precio %></td>
+        <td><%= desinfectante.presentacion %></td>
+        <td><%= desinfectante.stock %></td>
+        <td><%= desinfectante.liquido %></td>
+        <td><%= link_to 'Show', desinfectante %></td>
+        <td><%= link_to 'Edit', edit_desinfectante_path(desinfectante) %></td>
+        <td><%= link_to 'Destroy', desinfectante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Desinfectante', new_desinfectante_path %>

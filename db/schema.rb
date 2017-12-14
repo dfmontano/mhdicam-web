@@ -10,15 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171206032629) do
+ActiveRecord::Schema.define(version: 20171211041932) do
 
-  create_table "corridas_piscinas", id: false, force: :cascade do |t|
-    t.integer "corrida_id", null: false
-    t.integer "piscina_id", null: false
-    t.index ["corrida_id", "piscina_id"], name: "index_corridas_piscinas_on_corrida_id_and_piscina_id"
-  end
+# Could not dump table "bacteria" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+# Could not dump table "balanceados" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+# Could not dump table "corridas" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+# Could not dump table "corridas_piscinas" because of following StandardError
+#   Unknown type 'uuid' for column 'corrida_id'
+
+# Could not dump table "desinfectantes" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+# Could not dump table "fertilizantes" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
 
 # Could not dump table "periodos" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+# Could not dump table "piscinas" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+# Could not dump table "vitaminas" because of following StandardError
 #   Unknown type 'uuid' for column 'id'
 
 end

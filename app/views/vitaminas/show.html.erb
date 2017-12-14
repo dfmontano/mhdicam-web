@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @vitamina.marca %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @vitamina.tipo %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @vitamina.precio %>
+</p>
+
+<p>
+  <strong>Presentacion:</strong>
+  <%= @vitamina.presentacion %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @vitamina.stock %>
+</p>
+
+<p>
+  <strong>Liquido:</strong>
+  <%= @vitamina.liquido %>
+</p>
+
+<%= link_to 'Edit', edit_vitamina_path(@vitamina) %> |
+<%= link_to 'Back', vitaminas_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @bacterium.marca %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @bacterium.tipo %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @bacterium.precio %>
+</p>
+
+<p>
+  <strong>Presentacion:</strong>
+  <%= @bacterium.presentacion %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @bacterium.stock %>
+</p>
+
+<p>
+  <strong>Liquido:</strong>
+  <%= @bacterium.liquido %>
+</p>
+
+<%= link_to 'Edit', edit_bacterium_path(@bacterium) %> |
+<%= link_to 'Back', bacteria_path %>

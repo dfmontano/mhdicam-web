@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marca:</strong>
+  <%= @fertilizante.marca %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @fertilizante.tipo %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @fertilizante.precio %>
+</p>
+
+<p>
+  <strong>Presentacion:</strong>
+  <%= @fertilizante.presentacion %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @fertilizante.stock %>
+</p>
+
+<p>
+  <strong>Liquido:</strong>
+  <%= @fertilizante.liquido %>
+</p>
+
+<%= link_to 'Edit', edit_fertilizante_path(@fertilizante) %> |
+<%= link_to 'Back', fertilizantes_path %>

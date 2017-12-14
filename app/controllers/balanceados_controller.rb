@@ -28,7 +28,7 @@ class BalanceadosController < ApplicationController
     cantidad = params[:nuevoStock]
 
     @balanceado.update_attribute(:stock, cantidad)
-    
+
     flash[:notice] = 'Stock actualizado'
 
   end
@@ -62,7 +62,7 @@ class BalanceadosController < ApplicationController
 
     stock = stock + cantidad
 
-    @balanceado.update_attribute(:stock, stock)
+    @balanceado.update_attribute :stock, stock
 
     flash[:notice] = 'Stock actualizado correctamente'
 
