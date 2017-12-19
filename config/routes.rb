@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :gastos_balanceados
   resources :vitaminas
   resources :desinfectantes
   resources :bacteria

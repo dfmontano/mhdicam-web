@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#Font Awesome bundled for rails
+gem "font-awesome-rails"
+#Immigrant to generate foreing keys in migrations
+gem 'immigrant'
 #Rails helper for include octicons in html
 gem 'octicons_helper'
 #RubyMoney for handle currency and money operations

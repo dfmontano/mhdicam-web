@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gastos Balanceados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id balanceado</th>
+      <th>Id periodo</th>
+      <th>Cantidad</th>
+      <th>Preciokg</th>
+      <th>Subtotal</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gastos_balanceados.each do |gastos_balanceado| %>
+      <tr>
+        <td><%= gastos_balanceado.id_balanceado %></td>
+        <td><%= gastos_balanceado.id_periodo %></td>
+        <td><%= gastos_balanceado.cantidad %></td>
+        <td><%= gastos_balanceado.precioKg %></td>
+        <td><%= gastos_balanceado.subtotal %></td>
+        <td><%= link_to 'Show', gastos_balanceado %></td>
+        <td><%= link_to 'Edit', edit_gastos_balanceado_path(gastos_balanceado) %></td>
+        <td><%= link_to 'Destroy', gastos_balanceado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gastos Balanceado', new_gastos_balanceado_path %>

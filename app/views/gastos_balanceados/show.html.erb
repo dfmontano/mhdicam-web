@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id balanceado:</strong>
+  <%= @gastos_balanceado.id_balanceado %>
+</p>
+
+<p>
+  <strong>Id periodo:</strong>
+  <%= @gastos_balanceado.id_periodo %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @gastos_balanceado.cantidad %>
+</p>
+
+<p>
+  <strong>Preciokg:</strong>
+  <%= @gastos_balanceado.precioKg %>
+</p>
+
+<p>
+  <strong>Subtotal:</strong>
+  <%= @gastos_balanceado.subtotal %>
+</p>
+
+<%= link_to 'Edit', edit_gastos_balanceado_path(@gastos_balanceado) %> |
+<%= link_to 'Back', gastos_balanceados_path %>

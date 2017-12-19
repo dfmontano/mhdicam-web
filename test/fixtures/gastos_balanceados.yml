@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_balanceado: MyString
+  id_periodo: MyString
+  cantidad: 1
+  precioKg: 1
+  subtotal: 1
+
+two:
+  id_balanceado: MyString
+  id_periodo: MyString
+  cantidad: 1
+  precioKg: 1
+  subtotal: 1

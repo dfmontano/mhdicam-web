@@ -1,0 +1,42 @@
+<%= form_with(model: gastos_balanceado, local: true) do |form| %>
+  <% if gastos_balanceado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gastos_balanceado.errors.count, "error") %> prohibited this gastos_balanceado from being saved:</h2>
+
+      <ul>
+      <% gastos_balanceado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id_balanceado %>
+    <%= form.text_field :id_balanceado, id: :gastos_balanceado_id_balanceado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_periodo %>
+    <%= form.text_field :id_periodo, id: :gastos_balanceado_id_periodo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cantidad %>
+    <%= form.number_field :cantidad, id: :gastos_balanceado_cantidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precioKg %>
+    <%= form.number_field :precioKg, id: :gastos_balanceado_precioKg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subtotal %>
+    <%= form.number_field :subtotal, id: :gastos_balanceado_subtotal %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
