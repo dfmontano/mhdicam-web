@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @gastos_fertilizante.cantidad %>
+</p>
+
+<p>
+  <strong>Id fertilizante:</strong>
+  <%= @gastos_fertilizante.id_fertilizante %>
+</p>
+
+<p>
+  <strong>Id periodo:</strong>
+  <%= @gastos_fertilizante.id_periodo %>
+</p>
+
+<p>
+  <strong>Preciounit:</strong>
+  <%= @gastos_fertilizante.precioUnit %>
+</p>
+
+<p>
+  <strong>Subtital:</strong>
+  <%= @gastos_fertilizante.subtital %>
+</p>
+
+<%= link_to 'Edit', edit_gastos_fertilizante_path(@gastos_fertilizante) %> |
+<%= link_to 'Back', gastos_fertilizantes_path %>

@@ -1,0 +1,42 @@
+<%= form_with(model: gastos_fertilizante, local: true) do |form| %>
+  <% if gastos_fertilizante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gastos_fertilizante.errors.count, "error") %> prohibited this gastos_fertilizante from being saved:</h2>
+
+      <ul>
+      <% gastos_fertilizante.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cantidad %>
+    <%= form.number_field :cantidad, id: :gastos_fertilizante_cantidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_fertilizante %>
+    <%= form.text_field :id_fertilizante, id: :gastos_fertilizante_id_fertilizante %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_periodo %>
+    <%= form.text_field :id_periodo, id: :gastos_fertilizante_id_periodo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precioUnit %>
+    <%= form.number_field :precioUnit, id: :gastos_fertilizante_precioUnit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subtital %>
+    <%= form.number_field :subtital, id: :gastos_fertilizante_subtital %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

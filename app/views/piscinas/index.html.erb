@@ -2,58 +2,54 @@
 
 <h1>Piscinas</h1>
 
+<div class="container-fluid">
 
+  <% @piscinas.in_groups_of(3, false) do |group| %>
 
+      <div class="row align-items-center">
 
+        <% group.each do |piscina| %>
 
-  <div class="container">
+            <div class="col-sm">
 
-    <% @piscinas.in_groups_of(3, false) do |group| %>
+              <div class="card" style="width: 20rem;">
 
-        <div class="row">
-
-          <% group.each do |piscina| %>
-
-              <div class="col-sm">
-
-                <div class="card" style="width: 20rem;">
-
-                  <div class="card-body">
-                    <h4 class="card-title">
-                      <%= piscina.nombre %>
-                    </h4>
-                    <p class="card-text">
-                      <%= piscina.hectareas %> Ha.
-                    </p>
-                    <a>
-                      <%= link_to piscina, class: 'btn btn-success' do %>
-                          <%= octicon "eye" %>
-                      <% end %>
-                    </a>
-                    <a>
-                      <%= link_to edit_piscina_path(piscina), class: 'btn btn-warning' do %>
-                          <%= octicon "pencil" %>
-                      <% end %>
-                    </a>
-                    <a>
-                      <%= link_to piscina, method: :delete, data: {confirm: 'Estás Seguro?'}, class: 'btn btn-danger' do %>
-                          <%= octicon "trashcan" %>
-                      <% end %>
-                    </a>
-                  </div>
-
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <%= piscina.nombre if piscina %>
+                  </h4>
+                  <p class="card-text">
+                    <%= piscina.hectareas if piscina %> Ha.
+                  </p>
+                  <a>
+                    <%= link_to piscina, class: 'btn btn-success' do %>
+                        <%= octicon "file" %>
+                    <% end %>
+                  </a>
+                  <a>
+                    <%= link_to edit_piscina_path(piscina), class: 'btn btn-warning' do %>
+                        <%= octicon "pencil" %>
+                    <% end %>
+                  </a>
+                  <a>
+                    <%= link_to piscina, method: :delete, data: {confirm: 'Estás Seguro?'}, class: 'btn btn-danger' do %>
+                        <%= octicon "trashcan" %>
+                    <% end %>
+                  </a>
                 </div>
 
               </div>
 
-          <% end %>
+            </div>
 
-        </div>
+        <% end %>
+
+      </div>
 
 
-    <% end %>
+  <% end %>
 
-  </div>
+</div>
 
 
 <br>

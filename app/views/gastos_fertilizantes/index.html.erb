@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gastos Fertilizantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cantidad</th>
+      <th>Id fertilizante</th>
+      <th>Id periodo</th>
+      <th>Preciounit</th>
+      <th>Subtital</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gastos_fertilizantes.each do |gastos_fertilizante| %>
+      <tr>
+        <td><%= gastos_fertilizante.cantidad %></td>
+        <td><%= gastos_fertilizante.id_fertilizante %></td>
+        <td><%= gastos_fertilizante.id_periodo %></td>
+        <td><%= gastos_fertilizante.precioUnit %></td>
+        <td><%= gastos_fertilizante.subtital %></td>
+        <td><%= link_to 'Show', gastos_fertilizante %></td>
+        <td><%= link_to 'Edit', edit_gastos_fertilizante_path(gastos_fertilizante) %></td>
+        <td><%= link_to 'Destroy', gastos_fertilizante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gastos Fertilizante', new_gastos_fertilizante_path %>

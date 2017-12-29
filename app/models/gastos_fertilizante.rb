@@ -1,4 +1,4 @@
-class GastosBalanceado < ApplicationRecord
+class GastosFertilizante < ApplicationRecord
 
   belongs_to :periodo
 

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cantidad: 1
+  id_fertilizante: MyString
+  id_periodo: MyString
+  precioUnit: 1
+  subtital: 1
+
+two:
+  cantidad: 1
+  id_fertilizante: MyString
+  id_periodo: MyString
+  precioUnit: 1
+  subtital: 1

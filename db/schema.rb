@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171214032252) do
+ActiveRecord::Schema.define(version: 20171229181256) do
 
 # Could not dump table "bacteria" because of following StandardError
 #   Unknown type 'uuid' for column 'id'
@@ -35,6 +35,9 @@ ActiveRecord::Schema.define(version: 20171214032252) do
 #   Unknown type 'uuid' for column 'id'
 
 # Could not dump table "gastos_balanceados" because of following StandardError
+#   Unknown type 'uuid' for column 'id'
+
+# Could not dump table "gastos_fertilizantes" because of following StandardError
 #   Unknown type 'uuid' for column 'id'
 
 # Could not dump table "periodos" because of following StandardError
